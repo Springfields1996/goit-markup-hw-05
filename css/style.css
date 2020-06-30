@@ -972,6 +972,52 @@ body {
   align-items: center;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 11;
+  background: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding: 40px;
+
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  transform: scale(1);
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.is--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.is--hiddden .modal {
+  transform: scale(0.8);
+}
+
 p {
   line-height: 1.2;
 }

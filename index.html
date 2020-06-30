@@ -75,7 +75,7 @@
               <h1 class="layout__main-title">
                 Эффективные решения для вашего бизнеса
               </h1>
-              <button class="btn btn-hero">
+              <button class="btn btn-hero" data-modal-open>
                 <span class="btn__text">
                   Заказать услугу
                 </span>
@@ -360,6 +360,7 @@
           </ul>
         </div>
       </section>
+      
     </main>
 
     <footer class="footer">
@@ -413,5 +414,13 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is--hidden" data-backdrop>
+      <div class="modal">
+      <button type="button" data-modal-close>Закрыть</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+
   </body>
 </html>
